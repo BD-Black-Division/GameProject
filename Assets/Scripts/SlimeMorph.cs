@@ -35,7 +35,7 @@ public class SlimeMorph : MonoBehaviour
 
     public bool isBeingBlown = false;
 
-    private PhysicMaterial solidMaterial, liquidMaterial, gasMaterial;
+    private PhysicsMaterial solidMaterial, liquidMaterial, gasMaterial;
 
     void Start()
     {
@@ -45,17 +45,17 @@ public class SlimeMorph : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         audioSource = GetComponent<AudioSource>();
 
-        solidMaterial = new PhysicMaterial();
+        solidMaterial = new PhysicsMaterial();
         solidMaterial.bounciness = 0.2f;
         solidMaterial.dynamicFriction = 0.5f;
         solidMaterial.staticFriction = 0.6f;
 
-        liquidMaterial = new PhysicMaterial();
+        liquidMaterial = new PhysicsMaterial();
         liquidMaterial.bounciness = 0f;
         liquidMaterial.dynamicFriction = 0.2f;
         liquidMaterial.staticFriction = 0.1f;
 
-        gasMaterial = new PhysicMaterial();
+        gasMaterial = new PhysicsMaterial();
         gasMaterial.bounciness = 0f;
         gasMaterial.dynamicFriction = 0.0f;
         gasMaterial.staticFriction = 0.0f;
